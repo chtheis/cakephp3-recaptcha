@@ -61,7 +61,7 @@ class RecaptchaComponent extends Component
         }
 
         $controller = $this->_registry->getController();
-        if ($controller->request->getData('g-recaptcha-response')) {
+        if ($controller->getRequest()->getData('g-recaptcha-response')) {
             $response = json_decode($this->apiCall());
 
             if (isset($response->success) && $response->success) {
