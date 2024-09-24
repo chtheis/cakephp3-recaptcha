@@ -39,14 +39,14 @@ class RecaptchaComponent extends Component
      * @param array $config config
      * @return void
      */
-    public function initialize(array $config = [])
+    public function initialize(array $config) : void
     {
         if (empty($config)) {
             $config = Configure::read('Recaptcha', []);
         }
 
         $this->setConfig($config);
-        $this->_registry->getController()->viewBuilder()->setHelpers(['Recaptcha.Recaptcha' => $this->_config]);
+        $this->_registry->getController()->viewBuilder()->addHelpers(['Recaptcha.Recaptcha' => $this->_config]);
     }
 
     /**
