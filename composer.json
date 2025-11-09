@@ -1,6 +1,6 @@
 {
     "name": "giginc/cakephp3-recaptcha",
-    "description": "Recaptcha for CakePHP 3",
+    "description": "Recaptcha for CakePHP 5",
     "license": "MIT",
     "type": "cakephp-plugin",
     "keywords": [
